@@ -1,0 +1,127 @@
+.popup{
+    background-color: rgb(250, 250, 250);    
+    padding: 1em;      
+    display: flex;
+}
+
+.popup.popOn{
+    animation-duration: 0.5s;
+    animation-name: pop;
+    animation-timing-function: ease-in-out;
+}
+
+.popup.popOff{
+
+    animation-duration: 0.5s;
+    animation-name: pop;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.popup.last{
+    border-radius: 0 0 15px 15px;
+}
+
+
+
+@keyframes pop {
+    0% {
+        transform: scale(0);        
+    }
+
+    75%{
+        transform: scale(1.1);  
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo{
+    border-radius: 15px;      
+    transition-duration: 0.5s;
+    transition-property: all;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.addThings{
+    background-color: rgb(240, 240, 240);
+    padding: 1em;
+}
+
+
+
+.head{
+    background-color: rgb(200, 200, 200);
+    padding: 1em;
+    border-radius: 15px 15px 0 0;
+}
+
+.foot{
+    background-color: rgb(250, 250, 250);    
+    padding: 1em; 
+    border-radius: 0 0 15px 15px;
+    
+}
+
+.low{
+    animation: getLow 0.5s;    
+}
+
+
+@keyframes getLow{
+    50% {        
+        transform: translateY(20px);
+    }
+}
+
+.inputAddThings{
+    outline: none;
+    border: none;    
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+
+.bas {
+    
+    animation: getBas 0.5s;
+}
+
+@keyframes getBas{
+    50% {        
+        transform: translateY(1em);        
+    }
+}
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: slategray;
+}
+
+
+input[type=text], textarea {
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+  }
+   
+  input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(255, 255, 255);
+  }
